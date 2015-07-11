@@ -1,0 +1,104 @@
+body {
+	min-height: 100%;
+
+    color: #2C2C2C;
+    text-shadow: none;
+
+	background: rgb(102, 126, 40);
+	background: -webkit-gradient(radial, 90% 90%, 0, 90% 90%, 740, from(rgb(230, 236, 181)), to(rgb(102, 126, 40)));
+	background: -webkit-radial-gradient(rgb(230, 236, 181), rgb(102, 126, 40));
+	background:    -moz-radial-gradient(rgb(230, 236, 181), rgb(102, 126, 40));
+	background:     -ms-radial-gradient(rgb(230, 236, 181), rgb(102, 126, 40));
+	background:      -o-radial-gradient(rgb(230, 236, 181), rgb(102, 126, 40));
+	background:         radial-gradient(rgb(230, 236, 181), rgb(102, 126, 40));
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h3 {
+    color: #2C2C2C;
+}
+
+.title {
+    z-index: 10;
+}
+
+.version {
+    margin-top: -1.5em;
+    font-size: 5em;
+    color: #cc3300;
+    text-align: center;
+    z-index: 0;
+}
+
+.logo {
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.agenda li.active {
+    -webkit-transition: 0.5s;
+	-moz-transition:    0.5s;
+	-ms-transition:     0.5s;
+	-o-transition:      0.5s;
+	transition:         0.5s;
+}
+
+.agenda.present li.active {
+    color: #cc3300;
+}
+
+#arch-0 img {
+    width: 820px;
+    /*height: 856px;*/
+    /*position: relative;*/
+    /*left: 50%;*/
+    /*margin-left: -152px;*/
+}
+
+.arch-backend {
+    background-image: url('architecture.png');
+    background-repeat: no-repeat;
+    background-position: -684px -601px;
+    width: 600px;
+    height: 527px;
+    position: relative;
+    left: 50%;
+    margin-left: -300px;
+}
+
+.arch-frontend {
+    background-image: url('architecture.png');
+    background-repeat: no-repeat;
+    background-position: -684px 0px;
+    width: 601px;
+    height: 529px;
+    position: relative;
+    left: 50%;
+    margin-left: -300px;
+}
+
+.arch-monitoring {
+    background-image: url('architecture.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 601px;
+    height: 529px;
+    position: relative;
+    left: 50%;
+    margin-left: -300px;
+}
+
+.arch-ide {
+    background-image: url('architecture.png');
+    background-repeat: no-repeat;
+    background-position: 0px -602px;
+    width: 601px;
+    height: 527px;
+    position: relative;
+    left: 50%;
+    margin-left: -300px;
+}
