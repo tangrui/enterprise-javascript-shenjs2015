@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.zyeeda</groupId>
+        <artifactId>origin</artifactId>
+        <version>4-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ringo-ssh</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Ringo Spring Hibernate and Stick Sample App</name>
+    <url>http://www.tangrui.net</url>
+    <packaging>war</packaging>
+
+    <properties>
+        <cdeio.version>2.1.0-SNAPSHOT</cdeio.version>
+        <jetty.config>${project.build.outputDirectory}/META-INF/jetty</jetty.config>
+    </properties>
+
+    <dependencies>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+      </dependency>
+        <dependency>
+            <groupId>com.zyeeda</groupId>
+            <artifactId>cdeio-core</artifactId>
+            <version>${cdeio.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <configuration>
+                    <jettyXml>
+                        ${jetty.config}/jetty.xml,${jetty.config}/jetty-http.xml,${jetty.config}/jetty-ssl.xml,${jetty.config}/jetty-https.xml,${jetty.config}/jetty-plus.xml,${jetty.config}/jetty-btm.xml
+                    </jettyXml>
+
+                    <webApp>
+                        <!--
+                         | Specify the correct context path.
+                        -->
+                        <contextPath>/ringo-ssh</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
